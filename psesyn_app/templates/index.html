@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pSESYNTH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="banner-back-index">
+        <nav >
+            <ul>
+                <li><a href="{% url 'psesyn:home' %}">Home</a></li>
+                <li><a href="{% url 'about:about' %}">About pSESYNTH</a></li>
+                <li><a href="{% url 'community:community' %}">Community</a></li>
+                <li><a href="{% url 'news:news' %}">News</a></li>
+                <li><a href="#">Project resources</a></li>
+                <li> <a href="{% url 'join:join' %}">Join us</a> </li>
+            </ul>
+        </nav>
+
+        <div class="banner-index">
+            <span class="banner-upper">The whole is not the sum of the <br> parts </br></span>
+            <span class="banner-text-index">pSESYNTH</span>
+            <span class="banner-lower">Building a synthesis database of past <br> human-environmental systems in the Global South</span>
+        </div>
+    </div>
+
+        {% block content %}
+        <div class="content">
+            {% for instance in home_instances %}
+                <h1>{{ instance.title }}</h1>
+                {{ instance.content|safe }}
+            {% endfor %}
+        </div>
+        {% endblock %}
+
+    <button class="join-us">Join us</button>
+</body>
+</html>

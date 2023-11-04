@@ -1,0 +1,276 @@
+body {
+    font-family: Arial, sans-serif;
+    background-repeat: no-repeat;
+    width: 1697px;
+
+}
+
+.banner-back-index {
+    height: 890px;
+    background-image: url('/static/psesyn/images/banner1.png');
+    background-repeat: no-repeat; 
+}
+
+.banner-back {
+    height: 485px;
+    background-image: url('/static/psesyn/images/banner_back.png');
+    background-repeat: no-repeat; 
+}
+
+nav {
+
+    background-size: cover; /* This will ensure the image covers the entire nav area */
+    background-position: center; /* This will center the image */
+
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    min-width: 1697px;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.2); /* Optional: a semi-transparent background to make text more readable */
+}
+
+nav li a {
+    display:block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.banner-index {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    min-width: 1710px;
+    height: 800px;
+}
+
+.banner {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    min-width: 1710px;
+    height: 400px;
+
+}
+
+.banner-upper {
+    position:absolute;
+    top: 3%;
+    left: 3%;
+    font-size: 4.3em;
+    font-weight: 100;
+    font-family: Helvetica;
+
+    color: black;
+} 
+
+.banner-text-index {
+    font-size: 8em;
+    font-family:Verdana;
+    position:absolute;
+    text-align: center;
+    top: 37%;  
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight:1000;
+    color: orange ;
+    animation: pulsing-glow 3s infinite
+}
+
+.banner-text {
+    font-size: 6em;
+    font-family:Verdana;
+    position:absolute;
+    text-align: center;
+    top: 25%;  
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight:1000;
+    color: orange ;
+    animation: pulsing-glow 3s infinite
+}
+
+.banner-lower {
+    background-color: rgba(255,255,255,0.1);
+    padding: 8px;
+    border-radius: 15px;
+    position:absolute;
+    text-align: center;
+    top: 45%;
+    left: 28%;
+    font-size: 2.1em;
+    font-weight: 100;
+    font-family: Helvetica;
+    font-style: italic;
+    color: black;
+    text-shadow: 0 0 10px white;
+}
+
+
+
+@keyframes pulsing-glow {
+    0% {
+        text-shadow: 0 0 10px rgb(77, 77, 77), 0 0 20px rgb(130, 0, 0);
+    }
+    50% {
+        text-shadow: 0 0 20px rgb(36, 36, 36), 0 0 30px rgb(166, 0, 0);
+    }
+    100% {
+        text-shadow: 0 0 10px rgb(77, 77, 77), 0 0 20px rgb(130, 0, 0);
+    }
+}
+
+
+/* Content Block Styles */
+
+.content {
+    padding: 40px 20px;
+    background-color: rgba(255, 165, 0, 0.1);  /* Light orange background with some transparency */
+    border: 2px solid rgba(135, 206, 250, 0.5);  /* Light blue border */
+    border-radius: 12px;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 95%;
+    line-height: 1.6;
+}
+
+.content-container {
+    width: 80%;  /* You can adjust the width as needed */
+    margin: 0 auto;  /* Centers the container horizontally */
+    padding: 3px ;
+
+}
+
+.content-container h1 {
+    text-align: center;
+    color: black;
+    font-size: 2em;  /* Adjust the font-size as needed */
+    margin-bottom: 20px;  /* Space between the title and the content */
+    /* border-bottom: 2px solid black;  */
+}
+
+.content-container p {
+    text-align: justify;
+    font-size: 1.3em;  /* Adjust the font-size as needed */
+    margin-bottom: 20px;  /* Space between paragraphs */
+
+}
+
+
+/* Heading Styles */
+.content h1, .instance h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;  /* Increased margin for better spacing */
+    border-bottom: 2px solid #ddd;  /* Underline for separation */
+    padding-bottom: 10px;  /* Padding to create space between text and underline */
+}
+
+/* Paragraph Styles */
+.content p, .instance p {
+    font-size: 1.3em;
+    color: #666;
+    margin-bottom: 20px;  /* Increased margin for better spacing */
+    text-align: justify;  /* Justified text for a clean look */
+}
+
+.instance { 
+    display: flex;             /* Use flexbox for the container */
+    flex-wrap: wrap;           /* Allow wrapping if there's not enough space */
+    gap: 20px;                 /* Optional: Add some gap between instances */
+    justify-content: center;   /* Optional: Center the items horizontally */
+} 
+
+
+.instance-content {
+    flex: 1;                   /* Make each instance take equal space */
+    min-width: 200px;          /* Optional: Give each instance a minimum width */
+    box-sizing: border-box; 
+    padding: 40px 20px;
+    background-color: rgba(255, 165, 0, 0.1);  /* Light orange background with some transparency */
+    border: 2px solid rgba(135, 206, 250, 0.5);  /* Light blue border */
+    border-radius: 12px;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 550px;
+    line-height: 1.6;
+}
+
+.join-us {
+    display: block;
+    width: 100px;
+    margin: 20px auto;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.join-us:hover {
+    background-color: hwb(155 36% 53%);
+}
+
+
+/* Profile of PIs*/
+.profile-container {
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    width: 500px; /* Adjusted for better layout */
+}
+
+.profile-header {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    align-items: start;
+    margin-bottom: 20px; /* Spacing between header and description */
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 8px; /* Optional: if you want rounded corners for the image */
+}
+
+.profile-info {
+    display: flex;
+    width: 300px ;
+    flex-direction: column;
+    text-align: center;
+}
+
+.profile-job{
+    margin: 0 !important;
+    text-align: center !important;
+    /* margin-bottom: 0px !important;  */
+}
+
+.profile-description {
+    color: #777;
+    line-height: 1.5;
+}
+
+
+.news-photo {
+    width: 500px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 8px; /* Optional: if you want rounded corners for the image */
+}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for objective in main_instance %}
+        <div class="content-container">
+            <h1>{{ objective.title }}</h1>
+            {{ objective.content | safe }}
+        </div>
+    {% endfor %}
+
+<div class="instance">
+    {% for instance in objective_instances %}
+        <div class="instance-content">
+
+                <h1>{{ instance.title }}</h1>
+                {{ instance.content|safe }}
+        </div>
+
+    {% endfor %}
+</div>
+{% endblock %}
