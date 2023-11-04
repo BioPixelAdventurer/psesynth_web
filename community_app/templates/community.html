@@ -19,11 +19,9 @@
 
         <div class="profile-info">
         <h1>{{ instance.first_name }} {{ instance.last_name }}</h1>
-        <p class="profile-job"> Roll: {{ instance.roll }} </p>
-        <p class="profile-job">Country: {{ instance.country }}</p>
-        {% if instance.field %}
-            <p class="profile-job">{{ instance.field }}</p>
-        {% endif %}
+        <p class="profile-job">{{ instance.roll|default:"" }} </p>
+        <p class="profile-job">{{ instance.country }}</p>
+            <p class="profile-job">{{ instance.field|default:"" }}</p>
 
     </div>
     </div>
