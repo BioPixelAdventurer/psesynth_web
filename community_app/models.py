@@ -6,7 +6,7 @@ from django.db import models
 class Participant(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    roll = models.ForeignKey('Roll', blank=True, on_delete=models.CASCADE)
+    roll = models.ForeignKey('Roll', blank=True, null=True, on_delete=models.CASCADE)
     contact = models.CharField(max_length=100, blank=True, null=True)
     field = models.ForeignKey('StudyField', on_delete=models.CASCADE, blank=True, null=True)
     country = models.ForeignKey('Country', on_delete=models.CASCADE)

@@ -8,7 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
+
 <body>
+<div class="f-body">
     <div class="banner-back">
         <nav >
             <ul>
@@ -17,7 +19,7 @@
                 <li><a href="{% url 'community:community' %}">Community</a></li>
                 <li><a href="{% url 'news:news' %}">News</a></li>
                 <li><a href="#">Project resources</a></li>
-                <li> <a href="{% url 'join:join' %}">Join us</a> </li>
+                <li><a href="{% url 'join:join' %}">Join us</a></li>
             </ul>
         </nav>
 
@@ -36,5 +38,6 @@
         {% endblock %}
 
     <button class="join-us">Join us</button>
+</div>    
 </body>
 </html>
