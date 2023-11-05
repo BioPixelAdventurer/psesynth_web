@@ -13,7 +13,7 @@ class Participant(models.Model):
     tags = models.ManyToManyField('Tag', blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     institution = models.ManyToManyField('Institution', blank=True, null=True)
-    image = models.ImageField(upload_to='participants/', default='psesyn_app/static/psesyn/images/community/default.png')
+    image = models.ImageField(upload_to='participants/', default='/defaults/default.png')
 
     def __str__(self):
         return f'{self.first_name} {self.last_name} ({self.institution.name})'
