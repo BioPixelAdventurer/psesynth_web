@@ -13,13 +13,13 @@ body {
 
 .banner-back-index {
     height: 890px;
-    background-image: url('/static/psesyn/images/banner1.png');
+    background-image: url('/psesynth_web/static/psesyn/images/banner1.png');
     background-repeat: no-repeat; 
 }
 
 .banner-back {
     height: 485px;
-    background-image: url('/static/psesyn/images/banner_back.png');
+    background-image: url('/psesynth_web/static/psesyn/images/banner_back.png');
     background-repeat: no-repeat; 
 }
 
