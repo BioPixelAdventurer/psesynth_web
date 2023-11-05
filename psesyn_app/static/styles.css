@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-repeat: no-repeat;
+    min-height: 1000px;
 }
 
 .f-body {
