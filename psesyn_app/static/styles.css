@@ -214,20 +214,25 @@ nav li a:hover {
 
 .join-us {
     display: block;
-    width: 100px;
+    font-size: 1.8em;
+    width: 130px;
+    height: 50px;
     margin: 20px auto;
     padding: 10px 15px;
-    background-color: #333;
-    color: white;
+    background-color: orange;
+    color: rgb(248, 244, 244);
     text-align: center;
-    border: none;
+    border-radius:12px;
+    border:none;
     cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1)
+    
 }
 
 
 
 .join-us:hover {
-    background-color: hwb(155 36% 53%);
+    background-color: rgb(212, 133, 29);
 }
 
 
@@ -268,8 +273,10 @@ nav li a:hover {
 }
 
 .profile-description {
-    color: #777;
     line-height: 1.5;
+    height: 125px;
+    overflow-y: auto;
+    margin-bottom: 0 !important;
 }
 
 
@@ -279,4 +286,16 @@ nav li a:hover {
     object-fit: cover;
     margin-right: 20px;
     border-radius: 8px; /* Optional: if you want rounded corners for the image */
+}
+
+.contact {
+    width: inherit;
+
+    height: 20px;
+    font-size: 1.3em;
+}
+
+.contact p {
+    margin: 0;
+    text-align: center !important;
 }

@@ -25,7 +25,14 @@
 
     </div>
     </div>
+    {% if instance.description %}
     <p class="profile-description">{{ instance.description }}</p>
+    {% endif %}
+    <div class="contact">
+        <p>
+            <a  href="mailto:{{ instance.contact }}">email</a>
+        </p>
+    </div>
 </div>
 
 {% endfor %}
