@@ -35,3 +35,20 @@ class Publication(models.Model):
 
     def __str__(self):
         return self.title
+    
+class PubType(models.Model):
+    publicationType = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.publicationType
+
+class PaperTemp(models.Model):
+    title = models.CharField(max_length=200)
+    publicationType = models.ForeignKey(PubType, on_delete=models.CASCADE)
+    content = models.TextField()
+    link = models.URLField(blank=True, null=True)
+
+    def __str__(self):
+        return self.title
+
+

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="content-container">
+    <h1>Publications</h1>
+
+{% for instance in instances %}
+    {% if instance.publicationType.publicationType == "paper" %}
+
+    <p>
+        - {{ instance.content }}
+        <a href="{{ instance.link }}"> Download </a>
+    </p>
+
+
+
+    {% endif %}
+{% endfor %}
+
+
+    <h1>Posters</h1>
+{% for instance in instances %}
+    {% if instance.publicationType.publicationType == "poster" %}
+        <p>
+            - {{ instance.content }}
+            <a href="{{ instance.link }}"> Download </a>
+        </p>
+    {% endif %}
+{% endfor %}
+
+</div>
+
+
+
+{% endblock %}

@@ -299,3 +299,18 @@ nav li a:hover {
     margin: 0;
     text-align: center !important;
 }
+
+.workflow-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% of the viewport height */
+    height: 1078px;
+}
+  
+.workflow-image img {
+max-width: 100%; /* Ensure the image doesn't exceed its original size */
+max-height: 100%; /* Ensure the image doesn't exceed its original size */
+width: auto; /* Responsive width */
+height: 100%; /* Responsive height */
+}
