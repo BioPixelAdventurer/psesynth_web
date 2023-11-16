@@ -14,14 +14,16 @@ body {
 .banner-back-index {
     position: relative;
     height: 890px;
-    background-image: url('/static/psesyn/images/banner1.png');
+    /* background-image: url('/static/psesyn/images/banner1.png'); */
+    /* background-image: url('/online/static/psesyn/images/banner1.png'); */
     background-repeat: no-repeat; 
 }
 
 .banner-back {
     position: relative;
     height: 485px;
-    background-image: url('/static/psesyn/images/banner_back.png');
+    /* background-image: url('/static/psesyn/images/banner_back.png'); */
+    /* background-image: url('/online/static/psesyn/images/banner_back.png'); */
     background-repeat: no-repeat; 
 }
 
