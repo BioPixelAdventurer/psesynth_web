@@ -19,15 +19,14 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-preffix = "online/"
-# preffix = ""
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(f'{preffix}', include(('psesyn_app.urls', 'psesyn'), namespace='psesyn')),
-    path(f'{preffix}community/', include(('community_app.urls', 'community_app'), namespace='community')),
-    path(f'{preffix}about/', include(('about_app.urls', 'about_app'), namespace='about')),
-    path(f'{preffix}news/', include(('news_app.urls', 'news_app'), namespace='news')),
-    path(f'{preffix}join/', include(('join_app.urls', 'join_app'), namespace='join')),
-    path(f'{preffix}resources/', include(('resources_app.urls', 'resources_app'), namespace='resources'))
+    path('', include(('psesyn_app.urls', 'psesyn'), namespace='psesyn')),
+    path('community/', include(('community_app.urls', 'community_app'), namespace='community')),
+    path('about/', include(('about_app.urls', 'about_app'), namespace='about')),
+    path('news/', include(('news_app.urls', 'news_app'), namespace='news')),
+    path('join/', include(('join_app.urls', 'join_app'), namespace='join')),
+    path('resources/', include(('resources_app.urls', 'resources_app'), namespace='resources'))
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
