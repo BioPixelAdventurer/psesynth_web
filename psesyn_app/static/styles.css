@@ -1,11 +1,14 @@
+
+
 body {
     font-family: Arial, sans-serif;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    min-width: 100vw;
 }
 
 .f-body {
-    width: 95%;
+    width: 96%;
     margin-left: auto;
     margin-right: auto;
 
@@ -41,8 +44,9 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    min-width: 100hv;
+    min-width: 100%;
     justify-content: space-around;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.2); /* Optional: a semi-transparent background to make text more readable */
 }
 
@@ -62,7 +66,7 @@ nav li a:hover {
 .banner-index {
     position: absolute;
     top: 8%;
-    min-width: 1697px;
+    min-width: 100%;
     width: 100%;
     height: 800px;
 }
@@ -71,7 +75,7 @@ nav li a:hover {
     position: relative;
     top: 8%;
     width: 100%;
-    min-width: 1697px;;
+    min-width: 100%;;
     height: 400px;
 
 }
@@ -80,10 +84,9 @@ nav li a:hover {
     position:absolute;
     top: 0%;
     left: 3%;
-    font-size: 4.3em;
+    font-size: 3em;
     font-weight: 100;
     font-family: Helvetica;
-
     color: black;
 } 
 
@@ -97,8 +100,10 @@ nav li a:hover {
     transform: translate(-50%, -50%);
     font-weight:1000;
     color: orange ;
-    animation: pulsing-glow 3s infinite
+    animation: pulsing-glow 3s infinite;
 }
+
+
 
 .banner-text {
     font-size: 6em;
@@ -152,7 +157,7 @@ nav li a:hover {
     border-radius: 12px;
     margin: 20px auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 95%;
+    max-width: 100%;
     line-height: 1.6;
 }
 
@@ -234,6 +239,9 @@ nav li a:hover {
     
 }
 
+.news-content {
+    min-width: 50%;
+}
 
 
 .join-us:hover {
@@ -286,8 +294,8 @@ nav li a:hover {
 
 
 .news-photo {
-    width: 500px;
-    height: 200px;
+    width: 20%;
+    /* height: 200px; */
     object-fit: cover;
     margin-right: 20px;
     border-radius: 8px; /* Optional: if you want rounded corners for the image */
@@ -318,4 +326,43 @@ max-width: 100%; /* Ensure the image doesn't exceed its original size */
 max-height: 100%; /* Ensure the image doesn't exceed its original size */
 width: auto; /* Responsive width */
 height: 100%; /* Responsive height */
+}
+
+@media (max-width: 600px) {
+    .banner-text-index, .banner-text {
+        font-size: 3.8em;
+        top: 20%;
+    }
+    .banner-lower {
+        left: 0%;
+        top: 32%;
+        font-size:1.3em;
+    }
+    .banner-upper {
+        top: 3%;
+        font-size:1.3em;
+    }
+    li a {
+        padding: 14px 3px !important;
+        font-size: 0.85em;
+    }
+    .workflow-image {
+        height: 100%;
+    }
+    .instance-content {
+        width: 100%;
+    }
+    .instance p {
+        font-size: 1em;
+        width: 100%;
+    }
+    .profile-header {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+    .news-photo {
+        width: 100%;
+    }
+
 }
