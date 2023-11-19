@@ -20,7 +20,8 @@ class ResourcesView(View):
                 'authors':authors_info,
                 'group': obj.group.name,
                 'year': obj.year.year,
-                'thumbnail':obj.thumbnail.url
+                'thumbnail':obj.thumbnail.url,
+                'link': obj.link
             })
 
         dictionary = {
