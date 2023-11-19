@@ -46,18 +46,35 @@ class Year(models.Model):
     def __str__(self):
         return str(self.year)
 
+class Group(models.Model):
+    name = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
+
 class PaperTemp(models.Model):
     title = models.CharField(max_length=200)
     publicationType = models.ForeignKey(PubType, on_delete=models.CASCADE)
     content = models.TextField()
     link = models.URLField(blank=True, null=True)
     authors = models.ManyToManyField(Author)
+    group = models.ForeignKey(Group, on_delete=models.CASCADE, null=True, blank=True)
     year = models.ForeignKey(Year, null=True, blank=True, on_delete=models.CASCADE)
     thumbnail = models.ImageField(upload_to='resources/', blank=True, null=True)
 
     def __str__(self):
         return self.title
 
+class Authorship(models.Model):
+    paper = models.ForeignKey(PaperTemp, on_delete=models.CASCADE)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    ranking = models.IntegerField()
+
+    class Meta:
+        unique_together = ('paper', 'author')
+
+    def __str__(self):
+        return f"{self.author} - {self.paper.title} (Rank: {self.ranking})"
 
 
 

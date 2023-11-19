@@ -12,18 +12,19 @@
 
     <div id="article">
         {% for instance in instances %}
-            {% if instance.publicationType.publicationType == "paper" %}
+            {% if instance.type == "paper" %}
 
             <div class="section-content">
-                <img src="{{ instance.thumbnail.url }}" alt="?" class="profile-photo">
+                <img src="{{ instance.thumbnail }}" alt="?" class="profile-photo">
                 <div>
                     <h1>
                         {{ instance.title }}
                     </h1>
                     <p>
-                        {% for author in instance.authors.all %}
-                            {{ author.last_name }}{% if not forloop.last %},{% else %}.{% endif %}
+                        {% for author in instance.authors %}
+                            {{ author.last_name }} {{ author.name_init }}.,
                         {% endfor %}
+                        {{ instance.group }}
                     </p>
                     <p>
                         {{ instance.year }}
@@ -38,17 +39,18 @@
 
     <div id="poster">
         {% for instance in instances %}
-            {% if instance.publicationType.publicationType == "poster" %}
+            {% if instance.type == "poster" %}
             <div class="section-content">
-                <img src="{{ instance.thumbnail.url }}" alt="?" class="profile-photo">
+                <img src="{{ instance.thumbnail }}" alt="?" class="profile-photo">
                 <div>
                     <h1>
                         {{ instance.title }}
                     </h1>
                     <p>
-                        {% for author in instance.authors.all %}
-                            {{ author.last_name }}{% if not forloop.last %},{% else %}.{% endif %}
+                        {% for author in instance.authors %}
+                            {{ author.last_name }} {{ author.name_init }}.,
                         {% endfor %}
+                        {{ instance.group }}
                     </p>
                     <p>
                         {{ instance.year }}

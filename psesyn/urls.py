@@ -28,5 +28,5 @@ urlpatterns = [
     path('about/', include(('about_app.urls', 'about_app'), namespace='about')),
     path('news/', include(('news_app.urls', 'news_app'), namespace='news')),
     path('join/', include(('join_app.urls', 'join_app'), namespace='join')),
-    path('resources/', include(('resources_app.urls', 'resources_app'), namespace='resources'))
+    path('resources/', include(('resources_app.urls', 'resources_app'), namespace='resources')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

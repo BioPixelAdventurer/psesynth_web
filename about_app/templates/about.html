@@ -5,7 +5,7 @@
     {% for objective in main_instance %}
         <div class="content-container">
             <h1>{{ objective.title }}</h1>
-            {{ objective.content | safe }}
+            <p>{{ objective.content | safe }}</p>
         </div>
     {% endfor %}
 
