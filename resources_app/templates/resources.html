@@ -1,36 +1,68 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
-<div class="content-container">
-    <h1>Articles</h1>
 
-{% for instance in instances %}
-    {% if instance.publicationType.publicationType == "paper" %}
+<div class="submenu">
+    <div class="selectors">
+        <button id="showArticles">Articles</button>
+        <button id="showPosters">Posters</button>
+    </div>
 
-    <p>
-        - {{ instance.content }}
-        <a href="{{ instance.link }}"> Download </a>
-    </p>
+    <div id="article">
+        {% for instance in instances %}
+            {% if instance.publicationType.publicationType == "paper" %}
 
+            <div class="section-content">
+                <img src="{{ instance.thumbnail.url }}" alt="?" class="profile-photo">
+                <div>
+                    <h1>
+                        {{ instance.title }}
+                    </h1>
+                    <p>
+                        {% for author in instance.authors.all %}
+                            {{ author.last_name }}{% if not forloop.last %},{% else %}.{% endif %}
+                        {% endfor %}
+                    </p>
+                    <p>
+                        {{ instance.year }}
+                    </p>
+                    <a href="{{ instance.link }}"> Download </a>
+                </div>
+            </div>
 
+            {% endif %}
+        {% endfor %}
+    </div>
 
-    {% endif %}
-{% endfor %}
-
-
-    <h1>Posters</h1>
-{% for instance in instances %}
-    {% if instance.publicationType.publicationType == "poster" %}
-        <p>
-            - {{ instance.content }}
-            <a href="{{ instance.link }}"> Download </a>
-        </p>
-    {% endif %}
-{% endfor %}
+    <div id="poster">
+        {% for instance in instances %}
+            {% if instance.publicationType.publicationType == "poster" %}
+            <div class="section-content">
+                <img src="{{ instance.thumbnail.url }}" alt="?" class="profile-photo">
+                <div>
+                    <h1>
+                        {{ instance.title }}
+                    </h1>
+                    <p>
+                        {% for author in instance.authors.all %}
+                            {{ author.last_name }}{% if not forloop.last %},{% else %}.{% endif %}
+                        {% endfor %}
+                    </p>
+                    <p>
+                        {{ instance.year }}
+                    </p>
+                    <a href="{{ instance.link }}"> Download </a>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
 
 </div>
 
-
+<script src="{% static 'js.js' %}"></script>
 
 {% endblock %}
+
