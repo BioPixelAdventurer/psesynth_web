@@ -20,6 +20,12 @@ pages_to_bake = [
         'model': 'Objectives'
     },
     {
+        'output': 'tostatic/baked/south.html',
+        'django_app': 'about_app',
+        'view': 'SouthView',
+        'model': 'Objectives'
+    },
+    {
         'output': 'tostatic/baked/community.html',
         'django_app': 'community_app',
         'view': 'ParticipantView',
