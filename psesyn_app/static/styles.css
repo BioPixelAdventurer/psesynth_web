@@ -176,7 +176,8 @@ nav li a:hover {
     padding: 1%;
     align-items: center;
     justify-content: space-around;
-    background-color: rgba(255, 165, 0, 0.1);
+    background-color: rgba(202, 131, 0, 0.2);
+    box-shadow: 1px 1px 50px 20px rgba(0, 0, 0, 0.2)
 
 }
 .logos img {
@@ -207,7 +208,7 @@ nav li a:hover {
 
 }
 
-.content-container h1 {
+.content-container h1, button {
     text-align: center;
     color: black;
     font-size: 2em;  /* Adjust the font-size as needed */
@@ -266,7 +267,7 @@ nav li a:hover {
     font-size: 1.8em;
     width: auto;
     height: 50px;
-    margin: 10% auto;
+    margin: 6% auto;
     padding: 10px 15px;
     background-color: orange;
     color: rgb(248, 244, 244);
@@ -282,6 +283,13 @@ nav li a:hover {
 
 .join-us:hover {
     background-color: rgb(212, 133, 29);
+}
+
+.join-us a {
+
+    text-decoration: none;
+    color: white;
+
 }
 
 .news-content {
@@ -364,6 +372,55 @@ nav li a:hover {
 max-width: 70%; /* Ensure the image doesn't exceed its original size */
 width: 70%; /* Responsive width */
 height: auto; /* Responsive height */
+margin-top: 5%;
+}
+
+.section-content {
+    display: flex;                /* Make each instance take equal space */
+    box-sizing: border-box; 
+    padding: 40px 20px;
+    background-color: rgba(255, 165, 0, 0.1);  /* Light orange background with some transparency */
+    border: 2px solid rgba(135, 206, 250, 0.5);  /* Light blue border */
+    border-radius: 12px;
+    margin: 1% auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 55%;
+    line-height: 1.6;  
+}
+
+.submenu {
+    width: 80%;  /* You can adjust the width as needed */
+    margin: 0 auto;  /* Centers the container horizontally */
+    padding: 3px ;
+}
+
+.submenu .selectors {
+    display: flex;
+    justify-content: center;
+
+}
+
+.selectors button {
+    text-align: center;
+    color: black;
+    font-size: 2em;  /* Adjust the font-size as needed */
+    margin-top: 2%;  /* Space between the title and the content */
+    margin-left: 2%;
+    width: 30%;
+    background-color: rgba(255, 165, 0, 0.1);
+    /* background-color: transparent; */
+    border: 2px solid rgba(135, 206, 250, 0.5); 
+    border-radius: 12px;
+}
+
+.selectors button:hover {
+    transform: scale(1.1); 
+}
+
+.section-content h1 {
+    font-weight: 1000;
+    font-size: 1em;
+    border-bottom: 2px solid #ddd;
 }
 
 @media (max-width: 600px) {
@@ -400,6 +457,15 @@ height: auto; /* Responsive height */
         justify-content: center;
     }
     .news-photo {
+        width: 100%;
+    }
+    .selectors button {
+        z-index: 10;
+        margin-left: 4%;
+        width: 50%;
+    }
+    .section-content {
+        flex-wrap: wrap;
         width: 100%;
     }
 

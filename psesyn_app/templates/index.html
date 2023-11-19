@@ -14,7 +14,17 @@
         <nav >
             <ul>
                 <li><a href="{% url 'psesyn:home' %}">Home</a></li>
-                <li><a href="{% url 'about:about' %}">About pSESYNTH</a></li>
+                <li class="dropdown">
+                    <a href="#">About pSESYNTH</a>
+                    <ul class="dropdown-content">
+                        <li>
+                            <a href="{% url 'about:about' %}">Objetives</a>
+                        </li>
+                        <li>
+                            <a href="#">Why Global South?</a>
+                        </li>
+                    </ul>
+                </li>
                 <li><a href="{% url 'community:community' %}">Community</a></li>
                 <li><a href="{% url 'resources:resources' %}">Project resources</a></li>
                 <li><a href="{% url 'news:news' %}">News</a></li>
@@ -37,8 +47,11 @@
             {% endfor %}
         </div>
         {% endblock %}
-
-    <button class="join-us">Join us</button>
+    <div style="width: 100%; text-align: center;">
+        <button class="join-us">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_kRXN2Tq5EM4oOQtg5aliWcYwL_hG5XCetIxIzbTboY4Iqw/viewform?usp=pp_url">Join us</a>
+        </button>
+    </div>
     <div class="logos">
         <img src="{% static 'psesyn/images/inqua-logo.png' %}" alt="">
     </div>

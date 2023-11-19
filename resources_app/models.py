@@ -7,8 +7,6 @@ from django.db import models
 class Author(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    email = models.EmailField(unique=True)
-    affiliation = models.CharField(max_length=255, null=True, blank=True)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
@@ -41,14 +39,25 @@ class PubType(models.Model):
 
     def __str__(self):
         return self.publicationType
+    
+class Year(models.Model):
+    year = models.IntegerField()
+
+    def __str__(self):
+        return str(self.year)
 
 class PaperTemp(models.Model):
     title = models.CharField(max_length=200)
     publicationType = models.ForeignKey(PubType, on_delete=models.CASCADE)
     content = models.TextField()
     link = models.URLField(blank=True, null=True)
+    authors = models.ManyToManyField(Author)
+    year = models.ForeignKey(Year, null=True, blank=True, on_delete=models.CASCADE)
+    thumbnail = models.ImageField(upload_to='resources/', blank=True, null=True)
 
     def __str__(self):
         return self.title
+
+
 
 
