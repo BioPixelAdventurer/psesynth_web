@@ -172,18 +172,19 @@ nav li a:hover {
 
     display: flex;
     flex-wrap: wrap;
-    height: 10vh;
+    height: 4vh;
     padding: 1%;
     align-items: center;
     justify-content: space-around;
     background-color: rgba(202, 131, 0, 0.2);
-    box-shadow: 1px 1px 50px 20px rgba(0, 0, 0, 0.2)
+    box-shadow: 1px 1px 50px 20px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px -10px 20px -15px rgba(0, 0, 0, 0.2); */
 
 }
 .logos img {
 
     box-sizing: content-box;
-    height: 80%;
+    height: 100%;
     width: auto;
 
 }
@@ -208,7 +209,7 @@ nav li a:hover {
 
 }
 
-.content-container h1, button {
+.content-container h1, button{
     text-align: center;
     color: black;
     font-size: 2em;  /* Adjust the font-size as needed */
@@ -216,13 +217,36 @@ nav li a:hover {
     /* border-bottom: 2px solid black;  */
 }
 
-.content-container p {
+.content-container p{
     text-align: justify;
     font-size: 1.3em;  /* Adjust the font-size as needed */
     margin-bottom: 20px;  /* Space between paragraphs */
 
 }
 
+.content-container ul li {
+    text-align: justify;
+    font-size: 1.3em;  /* Adjust the font-size as needed */
+    margin-bottom: 20px;  /* Space between paragraphs */
+    width: 80%;
+
+}
+
+
+.global {
+
+    display: flex; 
+    align-items: center; 
+    align-content: center; 
+    flex-wrap: wrap;
+
+}
+
+.global img {
+
+    width: 50%;
+
+}
 
 /* Heading Styles */
 .content h1, .instance h1 {
@@ -468,5 +492,12 @@ margin-top: 5%;
         flex-wrap: wrap;
         width: 100%;
     }
+
+    .global img {
+
+        width: 100% !important;
+    
+    }
+    
 
 }

@@ -12,3 +12,15 @@ class AboutView(View):
         }
 
         return render(request, 'about.html', dictionary)
+
+
+class SouthView(View):
+    def get(self, request):
+        objectives_instances = Objectives.objects.filter().exclude(title='Objectives')
+        main_instance = Objectives.objects.filter(title='Objectives')
+        context = {
+            'objective_instances': objectives_instances,
+            'main_instance': main_instance
+        }
+
+        return render(request, 'south.html', context)
