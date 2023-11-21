@@ -362,6 +362,10 @@ nav li a:hover {
     margin-bottom: 0 !important;
 }
 
+.profile-tag {
+    font-weight: 600;
+}
+
 
 .news-photo {
     width: 20%;
