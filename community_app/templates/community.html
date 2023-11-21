@@ -26,12 +26,18 @@
             </div>
             <p class="profile-job">
                 {% for institution in instance.institution.all %}
-                    {{ institution.name }}
+                    {{ institution.name|safe }}
+                {% endfor %}
+            </p>
+
+            <p class="profile-tag">
+                {% for tags in instance.tags.all %}
+                    {{ tags.name }} 
                 {% endfor %}
             </p>
             
             {% if instance.description %}
-            <p class="profile-description">{{ instance.description }}</p>
+            <p class="profile-description">{{ instance.description|safe }}</p>
             {% endif %}
             <div class="contact">
                 <p>
