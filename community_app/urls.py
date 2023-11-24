@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import ParticipantView
+from .views import ParticipantView, CoordView
 
 urlpatterns = [
-    path('', ParticipantView.as_view(), name='com_manager'),
+    path('coordinators', CoordView.as_view(), name='coord'),
+    path('participants', ParticipantView.as_view(), name='parti'),
 ]
