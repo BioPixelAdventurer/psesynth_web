@@ -2,5 +2,5 @@ from django.urls import path
 from .views import ParticipantView
 
 urlpatterns = [
-    path('', ParticipantView.as_view(), name='community'),
+    path('', ParticipantView.as_view(), name='com_manager'),
 ]

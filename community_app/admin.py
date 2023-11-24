@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Participant, Country,Tag, StudyField, Institution, Roll
+from .models import Participant, Country,Tag, StudyField, Institution, Roll, Roll_s
 
 admin.site.register(Participant)
 admin.site.register(Country)
@@ -7,3 +7,4 @@ admin.site.register(Tag)
 admin.site.register(StudyField)
 admin.site.register(Institution)
 admin.site.register(Roll)
+admin.site.register(Roll_s)

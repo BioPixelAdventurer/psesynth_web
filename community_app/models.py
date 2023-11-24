@@ -7,6 +7,7 @@ class Participant(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     roll = models.ForeignKey('Roll', blank=True, null=True, on_delete=models.CASCADE)
+    roll_s = models.ForeignKey('Roll_s', blank=True, null=True, on_delete=models.CASCADE)
     contact = models.CharField(max_length=100, blank=True, null=True)
     field = models.ForeignKey('StudyField', on_delete=models.CASCADE, blank=True, null=True)
     country = models.ForeignKey('Country', on_delete=models.CASCADE)
@@ -47,6 +48,12 @@ class Institution(models.Model):
         verbose_name_plural = 'Institutions'
 
 class Roll(models.Model):
+    roll = models.CharField(max_length=100, blank=True)
+
+    def __str__(self):
+        return f'{self.roll}'
+
+class Roll_s(models.Model):
     roll = models.CharField(max_length=100, blank=True)
 
     def __str__(self):
