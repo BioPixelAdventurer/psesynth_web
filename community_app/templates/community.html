@@ -1,52 +1,62 @@
 {% extends "base.html" %}
-{% load static %}
 
 {% block content %}
-<div class="content-container">
-    <h1>
-        Community
-    </h1>
-</div>
 
-<div class="instance">
-    {% for instance in instances %}
-        <div class="instance-content">
+    <div class="content-container">
 
-            <div class="profile-header">
+        <h1>
+            {{ header_text }}
+        </h1>
 
-                <img src="{{ instance.image.url }}" alt="Profile Photo" class="profile-photo">
+        <p>
+            We are 60 ECRs, DCRs, and scientists from other career stages from 20 countries.
+        </p>
 
-                <div class="profile-info">
-                    <h1>{{ instance.first_name }} {{ instance.last_name }}</h1>
-                    <p class="profile-job">{{ instance.roll|default:"" }} </p>
-                    <p class="profile-job">{{ instance.country }}</p>
-                    <p class="profile-job">{{ instance.field|default:"" }}</p>
 
+    </div>
+
+    <div class="instance">
+        {% for instance in instances %}
+            <div class="instance-content">
+    
+                <div class="profile-header">
+    
+                    <img src="{{ instance.image.url }}" alt="Profile Photo" class="profile-photo">
+    
+                    <div class="profile-info">
+                        <h1>{{ instance.first_name }} {{ instance.last_name }}</h1>
+                        <p class="profile-job">{{ instance.roll|default:"" }} </p>
+                        <p class="profile-job">{{ instance.country }}</p>
+                        <p class="profile-job">{{ instance.field|default:"" }}</p>
+    
+                    </div>
+                </div>
+                <p class="profile-job">
+                    {% for institution in instance.institution.all %}
+                        {{ institution.name|safe }}
+                    {% endfor %}
+                </p>
+    
+                <p class="profile-tag">
+                    {% for tags in instance.tags.all %}
+                        {{ tags.name }} 
+                    {% endfor %}
+                </p>
+                
+                {% if instance.description %}
+                <p class="profile-description">{{ instance.description|safe }}</p>
+                {% endif %}
+                <div class="contact">
+                    <p>
+                        <a  href="mailto:{{ instance.contact }}">email</a>
+                    </p>
                 </div>
             </div>
-            <p class="profile-job">
-                {% for institution in instance.institution.all %}
-                    {{ institution.name|safe }}
-                {% endfor %}
-            </p>
+        {% endfor %}
+    </div>
 
-            <p class="profile-tag">
-                {% for tags in instance.tags.all %}
-                    {{ tags.name }} 
-                {% endfor %}
-            </p>
-            
-            {% if instance.description %}
-            <p class="profile-description">{{ instance.description|safe }}</p>
-            {% endif %}
-            <div class="contact">
-                <p>
-                    <a  href="mailto:{{ instance.contact }}">email</a>
-                </p>
-            </div>
-        </div>
+    {% block commun_content %}
 
-    {% endfor %}
-</div>
+    {% endblock commun_content %}
 
-{% endblock %}
+{%  endblock %}

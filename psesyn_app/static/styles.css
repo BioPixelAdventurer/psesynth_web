@@ -10,7 +10,7 @@ body {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.75vh;
+    /* font-size: 1.75vh; */
 }
 
 .banner-back-index {
@@ -210,14 +210,14 @@ nav li a:hover {
 .content-container h1, button{
     text-align: center;
     color: black;
-    font-size: 2em;  /* Adjust the font-size as needed */
+    font-size: 2rem;  /* Adjust the font-size as needed */
     margin-bottom: 20px;  /* Space between the title and the content */
     /* border-bottom: 2px solid black;  */
 }
 
 .content-container p{
     text-align: justify;
-    font-size: 1.3em;  /* Adjust the font-size as needed */
+    font-size: 1.3rem;  /* Adjust the font-size as needed */
     margin-bottom: 20px;  /* Space between paragraphs */
 
 }
@@ -248,7 +248,7 @@ nav li a:hover {
 
 /* Heading Styles */
 .content h1, .instance h1 {
-    font-size: 2em;
+    font-size: 2rem;
     color: #333;
     margin-bottom: 20px;  /* Increased margin for better spacing */
     border-bottom: 2px solid #ddd;  /* Underline for separation */
