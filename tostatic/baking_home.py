@@ -47,8 +47,8 @@ else:
     # It's a function-based view
     response = view(request)
 
-html_content = response.content.decode()
+html_content = response.content.decode('utf-8')
 
 # Write the rendered content to the specified HTML file
-with open(args.output, 'w') as file:
+with open(args.output, 'w', encoding='utf-8') as file:
     file.write(html_content)
