@@ -26,7 +26,13 @@ pages_to_bake = [
         'model': 'Objectives'
     },
     {
-        'output': 'tostatic/baked/community.html',
+        'output': 'tostatic/baked/coordinators.html',
+        'django_app': 'community_app',
+        'view': 'CoordView',
+        'model': 'Participant'
+    },
+    {
+        'output': 'tostatic/baked/participants.html',
         'django_app': 'community_app',
         'view': 'ParticipantView',
         'model': 'Participant'
