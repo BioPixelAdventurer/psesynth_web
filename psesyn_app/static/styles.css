@@ -122,7 +122,6 @@ nav li a:hover {
 }
 
 
-
 .banner-text {
     font-size: 6em;
     font-family:Verdana;
@@ -284,6 +283,41 @@ nav li a:hover {
     line-height: 1.6;
 }
 
+.redes {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+}
+
+.redes button{
+
+    font-size: 1.8em;
+    width: auto;
+    height: 50px;
+    margin: 6% auto;
+    padding: 10px 15px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius:12px;
+    border:none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    margin-top: 1rem;
+}
+
+.redes a {
+    text-decoration: none;
+    color: black;
+    vertical-align: middle;
+}
+
+.redes img {
+    width: 2rem;
+    vertical-align: middle;
+}
+
 .join-us {
     display: block;
     font-size: 1.8em;
@@ -297,7 +331,8 @@ nav li a:hover {
     border-radius:12px;
     border:none;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 1)
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    margin-bottom: 1rem;
 
     
 }
@@ -451,6 +486,12 @@ margin-top: 5%;
 }
 
 @media (max-width: 600px) {
+    .redes {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    
+    }
     .banner-text-index, .banner-text {
         font-size: 3.8em;
         top: 20%;
